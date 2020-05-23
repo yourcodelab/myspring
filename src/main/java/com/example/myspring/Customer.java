@@ -18,7 +18,8 @@ public class Customer{
 	@Column(name = "last_name")
 	private String lastName;
 
-    public Customer(String firstName, String lastName){
+    public Customer(long id, String firstName, String lastName){
+	this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -41,5 +42,13 @@ public class Customer{
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	public long getId(){
+		return this.id;
+	}
+	
+	public void setId(long id){
+		this.id = id;
 	}
 }
